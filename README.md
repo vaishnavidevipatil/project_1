@@ -90,3 +90,11 @@ Conclusion
 FastAPI’s automatic documentation is a powerful tool that not only helps developers interact with your API but also keeps your documentation always up-to-date. With no extra configuration needed, FastAPI automatically generates Swagger UI and ReDoc documentation for every API route, making it easier to visualize, understand, and test your APIs.
 
 For further customization or more advanced use cases, refer to the official FastAPI documentation
+
+uvicorn main:app --reload
+http://127.0.0.1:8000- Fastapi/docs
+mongodb://localhost:27017
+
+use companyDB
+db.createCollection('items')
+db.createCollection('user_clock_in_records')
