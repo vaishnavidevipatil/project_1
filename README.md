@@ -1,4 +1,5 @@
 # project_1:FastAPI Overview
+
 FastAPI is a modern, fast (high-performance), and easy-to-use web framework for building APIs with Python. It’s based on standard Python type hints and provides automatic generation of interactive documentation for your APIs, such as Swagger UI and ReDoc.
 
 This guide will walk you through the basics of FastAPI and how it works.
@@ -14,7 +15,6 @@ The API retrieves the newly created user record from the database and returns it
 
 2. GET /users/{id}: Retrieve a user by ID
 Purpose: To retrieve a specific user by its unique MongoDB ID (_id).
-Input: The id parameter is passed in the URL path.
 Processing:
 The ID is validated as a MongoDB ObjectId.
 The API searches the user_collection for a document with the provided ID.
@@ -86,6 +86,15 @@ The record is updated in the database.
 If the update is successful, a confirmation message is returned. If the record is not found, a 404 error is raised.
 
 Conclusion
+
 FastAPI’s automatic documentation is a powerful tool that not only helps developers interact with your API but also keeps your documentation always up-to-date. With no extra configuration needed, FastAPI automatically generates Swagger UI and ReDoc documentation for every API route, making it easier to visualize, understand, and test your APIs.
 
 For further customization or more advanced use cases, refer to the official FastAPI documentation
+
+uvicorn main:app --reload
+http://127.0.0.1:8000- Fastapi/docs
+mongodb://localhost:27017
+
+use companyDB
+db.createCollection('items')
+db.createCollection('user_clock_in_records')
