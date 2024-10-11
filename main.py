@@ -1,4 +1,5 @@
 import uvicorn
+import os
 from fastapi import FastAPI
 
 from routes import items, clock_in
