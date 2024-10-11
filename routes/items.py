@@ -15,6 +15,7 @@ def item_helper(item) -> dict:
 # Create a new item
 @router.post("/items")
 async def create_item(item: ItemModel):
+  
     item_dict = item.dict()
     item_dict['insert_date'] = datetime.utcnow()
     new_item = await items_collection.insert_one(item_dict)
@@ -24,6 +25,7 @@ async def create_item(item: ItemModel):
 ## Retrieve an item by ID
 @router.get("/items/{id}")
 async def get_item(id: str):
+    # breakpoint()
     # Validate if the ID is a valid ObjectId
     if not ObjectId.is_valid(id):
         raise HTTPException(status_code=400, detail="Invalid ID format")
