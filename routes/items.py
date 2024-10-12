@@ -15,7 +15,6 @@ def item_helper(item) -> dict:
 # Create a new item
 @router.post("/items")
 async def create_item(item: ItemModel):
-  
     item_dict = item.dict()
     item_dict['insert_date'] = datetime.utcnow()
     new_item = await items_collection.insert_one(item_dict)

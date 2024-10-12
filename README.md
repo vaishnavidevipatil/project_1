@@ -95,6 +95,10 @@ uvicorn main:app --reload
 http://127.0.0.1:8000- Fastapi/docs
 mongodb://localhost:27017
 
-use companyDB
+testcompanydb
 db.createCollection('items')
 db.createCollection('user_clock_in_records')
+
+create .env file 
+to secure code: These files typically contain sensitive information such as API keys, database credentials, or configuration settings.The contents of a .env file are not meant to be hardcoded in the source code but are instead loaded into the project’s environment during runtime. The python-dotenv library is commonly employed to read the contents of the .env file and set the environment variables, making it a convenient way to manage project configurations securely.
+
